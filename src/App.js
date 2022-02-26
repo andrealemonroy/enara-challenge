@@ -99,11 +99,8 @@ function App() {
           index === i - 4 ||
           index === i + 4 ||
           index === i - 1 ||
-          index === i + 1 ||
           index === i + 3 ||
-          index === i - 3 ||
-          index === i - 5 ||
-          index === i + 5)
+          index === i - 5 )
       ) {
         validElements.push({
           value: element.value,
@@ -137,7 +134,7 @@ function App() {
             index={i}
             handleClick={(e) => handleClick(e, i)}
             text={element.value}
-            disabled={element.valid}
+            disabled={!element.valid}
           />
         ))}
       </div>
