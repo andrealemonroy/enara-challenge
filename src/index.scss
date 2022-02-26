@@ -1,0 +1,133 @@
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('./assets/fonts/ProximaNovaFont.otf');
+}
+
+*{
+  font-family: 'ProximaNova';
+}
+
+body{
+  margin: 0;
+}
+
+ul{
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 300px;
+  margin: auto;
+}
+
+.tile {
+  &:hover{
+    transform: perspective(750px)
+    translate3d(0px, 0px, 250px)
+    rotateX(27deg)
+    scale(0.9, 0.9);
+    box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.bg {
+  &-primary {
+    background-color: #d1e7e6;
+  }
+  &-secondary {
+    background-color: #326478;
+  }
+  &-third{
+    background-color: #E38069;
+  }
+}
+
+.text {
+  &-primary {
+    color: #d1e7e6;
+  }
+  &-secondary {
+    color: #326478;
+  }
+  &-third{
+    color: #E38069;
+  }
+  &-xs{
+    font-size: 1rem;
+  }
+  &-xl{
+    font-size: 2rem;
+  }
+  &-center{
+    text-align: center;
+  }
+}
+
+.w {
+  &-full {
+    width: 100%;
+  }
+  &-screen {
+    width: 100vw;
+  }
+  &-10 {
+    width: 3rem;
+  }
+  &-72 {
+    width: 18rem;
+  }
+}
+
+.h {
+  &-full {
+    height: 100%;
+  }
+  &-screen {
+    height: 100vw;
+  }
+  &-5 {
+    height: 1.5rem;
+  }
+  &-10 {
+    height: 3rem;
+  }
+}
+
+.m{
+  &-auto{
+    margin: auto
+  }
+}
+
+.mb {
+  &-1 {
+    margin-bottom: 1rem;
+  }
+}
+
+
+.border{
+  &-xs{
+    border-radius: 9px;
+  }
+}
+
+.flex{
+  display: flex;
+  &-center{
+    justify-content: center;
+    align-items: center;
+  }
+  &-col{
+    flex-direction: column;
+  }
+}
+
+.cursor{
+  &-pointer{
+    cursor: pointer;
+  }
+}
