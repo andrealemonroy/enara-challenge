@@ -1,22 +1,18 @@
 import { useEffect, useState } from "react";
 import { Tile } from "./components/Tile";
 import Title from "./components/Title";
-import Image from "./components/Image";
 import Text from "./components/Text";
 import Input from "./components/Input";
-import EnaraLogo from "./assets/images/enara-log-web.png";
 import Button from "./components/Button";
 function App() {
   const [file, setFile] = useState(null);
   const [counter, setCounter] = useState(0);
   const [data, setData] = useState([]);
   const [word, setWord] = useState("");
-  const [valid, setValid] = useState([]);
   const [dictionary, setDictionary] = useState(
     window.localStorage.getItem("dictionary") || null
   );
   const [found, setFound] = useState(false);
-  const [disabled, setDisabled] = useState(true);
   const validElements = [];
   const getLetters = (file) => {
     fetch(file)
