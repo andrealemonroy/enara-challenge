@@ -29,7 +29,7 @@ function App() {
             valid: true,
           };
         });
-        setData(reorganize);
+        setData(...data, reorganize);
       });
   };
 
@@ -45,7 +45,8 @@ function App() {
   }, []);
 
   useEffect(() => {
-    counter === 0 ? setFile("test-board-1.json") : setFile("test-board-2.json");
+    setFile("test-board-1.json")
+    setFile("test-board-2.json");
     getLetters(file);
   }, [counter, file]);
 
@@ -141,6 +142,7 @@ function App() {
     setWord("");
     setFound(null);
     setSelected([])
+    setData([])
   };
 
   return (
